@@ -1,16 +1,27 @@
-<div>
 
-    <div>
+
+    <div class="artist-container">
+
         {{#each artist}}
-        <img src="{{images.0.url}}" alt="Artist Image">
-        <h3>{{name}}</h3>
-        <a href="/albums/{{id}}">
-            <button class="btn-albums" type='submit'>View Albums</button>
-        </a>
+
+        <div class="artist">
+
+            <img src="{{images.0.url}}" alt="Artist Image">
+            <div class="title-btn">
+
+               <h3>{{name}}</h3>
+               <a href="/albums/{{id}}">
+                <button class="btn-albums" type='submit'>View Albums</button>
+               </a> 
+               
+            </div>
+            
+
+        </div>
+       
 
         {{/each}}
 
 
     </div>
 
-</div>
