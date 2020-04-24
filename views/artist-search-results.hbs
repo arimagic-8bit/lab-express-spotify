@@ -1,0 +1,16 @@
+<div>
+
+    <div>
+        {{#each artist}}
+        <img src="{{images.0.url}}" alt="Artist Image">
+        <h3>{{name}}</h3>
+        <a href="/albums/{{id}}">
+            <button class="btn-albums" type='submit'>View Albums</button>
+        </a>
+
+        {{/each}}
+
+
+    </div>
+
+</div>
