@@ -55,7 +55,7 @@ app.get("/albums/:id", (req, res) => {
   spotifyApi
     .getArtistAlbums(id)
     .then((albumFromId) => {
-      //console.log("The received data: ", albumFromId.body );
+      console.log("The received data: ", albumFromId.body.items);
       res.render("albums", { album: albumFromId.body.items });
     })
     .catch((err) => {
@@ -69,7 +69,7 @@ app.get("/tracks/:id", (req, res) => {
   spotifyApi
     .getAlbumTracks(idTrack)
     .then((trackFromApi) => {
-      console.log(trackFromApi.body.items);
+      //console.log(trackFromApi.body.items);
       res.render("tracks", {track: trackFromApi.body.items})
     })
     .catch((err) => {
